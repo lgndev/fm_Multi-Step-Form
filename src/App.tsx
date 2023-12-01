@@ -16,10 +16,17 @@ const mainCss = css({
   gridColumn: "1 / 2",
   gridRow: "1 / 2",
   margin: "99px 16px 24px 16px",
+  position: "relative",
+});
+
+const mainContentContainerCss = css({
+  position: "absolute",
+  width: "100%",
+  maxHeight: "100%",
+  overflowX: "hidden",
+  overflowY: "auto",
   padding: "32px 24px",
   borderRadius: "10px",
-  overflowX: "hidden",
-  overflow: "auto",
   backgroundColor: "#ffffff",
   boxShadow: "0px 4px 25px 0px rgba(0,0,0,0.10)",
 });
@@ -29,7 +36,11 @@ const App = () => {
     <>
       <div css={appContainerCss}>
         <SideBar />
-        <main css={mainCss}>Main</main>
+        <main css={mainCss}>
+          <div css={mainContentContainerCss}>
+            <div style={{ height: "600px" }}>Main Content</div>
+          </div>
+        </main>
         <NextStep />
       </div>
     </>
