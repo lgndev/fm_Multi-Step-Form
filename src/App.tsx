@@ -2,11 +2,17 @@ import "./App.css";
 import { css } from "@emotion/react";
 import SideBar from "./Components/SideBar";
 import NextStep from "./Components/NextStep";
+import { breakpoints } from "./emotionStyles/styles";
+
+const mq = breakpoints.map((bp) => `@media (min-width: ${bp}px)`);
 
 const appContainerCss = css({
   height: "100%",
   overflow: "hidden",
   backgroundColor: "#EFF5FF",
+  [mq[0]]: {
+    backgroundColor: "red",
+  },
   display: "grid",
   gridTemplateRows: "1fr auto",
   gridTemplateColumns: "1fr",
@@ -37,9 +43,7 @@ const App = () => {
       <div css={appContainerCss}>
         <SideBar />
         <main css={mainCss}>
-          <div css={mainContentContainerCss}>
-            <div style={{ height: "600px" }}>Main Content</div>
-          </div>
+          <div css={mainContentContainerCss}></div>
         </main>
         <NextStep />
       </div>
