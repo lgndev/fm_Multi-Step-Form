@@ -1,5 +1,7 @@
-import React from "react";
 import { css } from "@emotion/react";
+import { breakpoints } from "../emotionStyles/styles";
+
+const mq = breakpoints.map((bp) => `@media (min-width: ${bp}px)`);
 
 const nextStepContainerCss = css({
   gridColumn: "1 / 2",
@@ -9,6 +11,11 @@ const nextStepContainerCss = css({
   display: "flex",
   alignContent: "center",
   justifyContent: "flex-end",
+  [mq[0]]: {
+    padding: "16px 100px",
+    gridColumn: "2 / 3",
+    gridRow: "2 / 3",
+  },
 });
 
 const nextStepButtonCss = css({
@@ -19,6 +26,11 @@ const nextStepButtonCss = css({
   backgroundColor: "#022959",
   border: "none",
   color: "#ffffff",
+  [mq[0]]: {
+    height: "48px",
+    gridColumn: "2 / 3",
+    gridRow: "2 / 3",
+  },
 });
 
 const NextStep = () => {

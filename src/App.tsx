@@ -10,12 +10,15 @@ const appContainerCss = css({
   height: "100%",
   overflow: "hidden",
   backgroundColor: "#EFF5FF",
-  [mq[0]]: {
-    backgroundColor: "red",
-  },
   display: "grid",
   gridTemplateRows: "1fr auto",
   gridTemplateColumns: "1fr",
+  [mq[0]]: {
+    backgroundColor: "#ffffff",
+    padding: "16px",
+    gridTemplateColumns: "auto 1fr",
+    gridTemplateRows: "1fr auto",
+  },
 });
 
 const mainCss = css({
@@ -23,6 +26,11 @@ const mainCss = css({
   gridRow: "1 / 2",
   margin: "99px 16px 24px 16px",
   position: "relative",
+  [mq[0]]: {
+    margin: "0",
+    gridColumn: "2 / 3",
+    gridRow: "1 / 2",
+  },
 });
 
 const mainContentContainerCss = css({
@@ -35,6 +43,11 @@ const mainContentContainerCss = css({
   borderRadius: "10px",
   backgroundColor: "#ffffff",
   boxShadow: "0px 4px 25px 0px rgba(0,0,0,0.10)",
+  [mq[0]]: {
+    height: "100%",
+    boxShadow: "none",
+    padding: "40px 100px 0px 100px",
+  },
 });
 
 const App = () => {

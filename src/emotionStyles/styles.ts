@@ -1,1 +1,1 @@
-export const breakpoints = [600];
+export const breakpoints = [940];
