@@ -37,3 +37,18 @@ img {
 #root {
   height: 100vh;
 }
+
+@font-face {
+  font-family: "Ubuntu - bold";
+  src: url(src/assets/fonts/Ubuntu-Bold.ttf);
+}
+
+@font-face {
+  font-family: "Ubuntu - medium";
+  src: url(src/assets/fonts/Ubuntu-Medium.ttf);
+}
+
+@font-face {
+  font-family: "Ubuntu - regular";
+  src: url(src/assets/fonts/Ubuntu-Regular.ttf);
+}
